@@ -14,10 +14,16 @@ class App extends Component {
       showModal: false
     }
     this.handleOpenModal = this.handleOpenModal.bind(this)
+    this.handleCloseModal = this.handleCloseModal.bind(this)
   }
   handleOpenModal(){
     this.setState({
       showModal: true
+    })
+  }
+  handleCloseModal(){
+    this.setState({
+      showModal: false
     })
   }
 
@@ -42,19 +48,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+       <div className='main'>
+          <img src={this.state.pokepic} onClick={this.handleOpenModal} width="200px" height="200px"/><br/>
 
           <Modal isOpen={this.state.showModal} contentLabel='Testing Modal'>
-
-            <img src={this.state.pokepic} onClick={this.handleOpenModal} width="200px" height="200px"/><br/>
-
+            <img src={this.state.pokepic} width="250px" height="250px"/><br/>
+            <p onClick={this.handleCloseModal}>X</p>
           </Modal>
 
-          Pokemon: {this.state.name}<br/>
-          Poke weight: {this.state.weight}<br/>
-          Pokedex id: {this.state.id}<br/>
+          <h2 className='font'>Pokemon: {this.state.name}<br/></h2>
+          <h4 className='font'>Poke weight: {this.state.weight}<br/></h4>
+          <h4 className='font'>Pokedex id: {this.state.id}<br/></h4>
           <input placeholder="enter pokedex id or name"
           ref={(input)=>{this.searchPokemon = input}}/>
           <button onClick={this.findPokemon.bind(this)}>Click to search for pokemon</button>
+        </div>
+
+        <div className='info'>
+          <span>Instruction: search any pokemon either by name or pokedex ID. </span><br/>
+          <span>Click on the image to expand.</span>
+        </div>
+        <footer>By Huy Luong</footer>
       </div>
     );
   }

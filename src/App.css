@@ -1,24 +1,53 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body{
+  background-image: url('http://cdn.wallpapersafari.com/22/52/0xJEp5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+input{
+  width: 20em;
+  border-radius: 2em;
+  border: 2px solid blue;
+  padding: 3px;
+}
+input:focus{
+  background-color: lightblue;
+}
+button{
+  padding: 5px;
+  border-radius: 2em;
+  background-color: #295993;
   color: white;
 }
-
-.App-intro {
-  font-size: large;
+button:hover{
+  background-color: #dee85a;
+  color: #295993;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.main{
+  margin-top: -5em;
+  padding: 5em;
+  height: 20em;
+  width: 20em;
+  border-radius: 2em;
+  float: right;
+}
+.info{
+  float: left;
+  margin-top: 20em;
+  margin-left: 1em;
+}
+.font{
+  color: #635d0f;
+  margin-top: 0em;
+  font-family: serif;
+}
+span{
+  font-family: serif;
+  font-size: 20px;
+}
+footer{
+  float: left;
+  margin-top: 43em;
 }
